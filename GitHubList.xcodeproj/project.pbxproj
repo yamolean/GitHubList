@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,6 +14,9 @@
 		1864B0C7240A96D2002F6D23 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1864B0C6240A96D2002F6D23 /* Assets.xcassets */; };
 		1864B0CA240A96D2002F6D23 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1864B0C8240A96D2002F6D23 /* LaunchScreen.storyboard */; };
 		18E3E60C240A9B0300D00C3C /* GitHubEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E3E60B240A9B0300D00C3C /* GitHubEntity.swift */; };
+		18E3E612240A9E7800D00C3C /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E3E611240A9E7800D00C3C /* ListViewController.swift */; };
+		18E3E614240A9E8A00D00C3C /* ListViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18E3E613240A9E8A00D00C3C /* ListViewController.storyboard */; };
+		7C2BB5D2BD1E67DBCB9101D0 /* Pods_GitHubList.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F2DADDCB31480874657C141 /* Pods_GitHubList.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,11 @@
 		1864B0C9240A96D2002F6D23 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1864B0CB240A96D2002F6D23 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		18E3E60B240A9B0300D00C3C /* GitHubEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubEntity.swift; sourceTree = "<group>"; };
+		18E3E611240A9E7800D00C3C /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
+		18E3E613240A9E8A00D00C3C /* ListViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ListViewController.storyboard; sourceTree = "<group>"; };
+		697BA1F59BE24BA14DB078D8 /* Pods-GitHubList.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitHubList.release.xcconfig"; path = "Target Support Files/Pods-GitHubList/Pods-GitHubList.release.xcconfig"; sourceTree = "<group>"; };
+		6F2DADDCB31480874657C141 /* Pods_GitHubList.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GitHubList.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8D0FE78E37AE67FCBA0C6122 /* Pods-GitHubList.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitHubList.debug.xcconfig"; path = "Target Support Files/Pods-GitHubList/Pods-GitHubList.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +41,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7C2BB5D2BD1E67DBCB9101D0 /* Pods_GitHubList.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +53,8 @@
 			children = (
 				1864B0BC240A96CF002F6D23 /* GitHubList */,
 				1864B0BB240A96CF002F6D23 /* Products */,
+				B29EF587C01AF0BCFAEFE13E /* Pods */,
+				4021BB645F637E5D55C6AB5F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -61,7 +72,8 @@
 				1864B0BD240A96CF002F6D23 /* AppDelegate.swift */,
 				1864B0BF240A96CF002F6D23 /* SceneDelegate.swift */,
 				18E3E60A240A9AD300D00C3C /* Model */,
-				1864B0C1240A96CF002F6D23 /* ViewController.swift */,
+				18E3E60E240A9DB600D00C3C /* ViewController */,
+				18E3E60F240A9DCC00D00C3C /* ViewModel */,
 				1864B0C3240A96CF002F6D23 /* Main.storyboard */,
 				1864B0C6240A96D2002F6D23 /* Assets.xcassets */,
 				1864B0C8240A96D2002F6D23 /* LaunchScreen.storyboard */,
@@ -78,6 +90,48 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		18E3E60E240A9DB600D00C3C /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				1864B0C1240A96CF002F6D23 /* ViewController.swift */,
+				18E3E610240A9E6300D00C3C /* List */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		18E3E60F240A9DCC00D00C3C /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		18E3E610240A9E6300D00C3C /* List */ = {
+			isa = PBXGroup;
+			children = (
+				18E3E611240A9E7800D00C3C /* ListViewController.swift */,
+				18E3E613240A9E8A00D00C3C /* ListViewController.storyboard */,
+			);
+			path = List;
+			sourceTree = "<group>";
+		};
+		4021BB645F637E5D55C6AB5F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6F2DADDCB31480874657C141 /* Pods_GitHubList.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B29EF587C01AF0BCFAEFE13E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8D0FE78E37AE67FCBA0C6122 /* Pods-GitHubList.debug.xcconfig */,
+				697BA1F59BE24BA14DB078D8 /* Pods-GitHubList.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -85,9 +139,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1864B0CE240A96D2002F6D23 /* Build configuration list for PBXNativeTarget "GitHubList" */;
 			buildPhases = (
+				66EF6D8AD5B626FC2B3FEE4C /* [CP] Check Pods Manifest.lock */,
 				1864B0B6240A96CF002F6D23 /* Sources */,
 				1864B0B7240A96CF002F6D23 /* Frameworks */,
 				1864B0B8240A96CF002F6D23 /* Resources */,
+				28155484F415C1D4A5F85E34 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -139,10 +195,53 @@
 				1864B0CA240A96D2002F6D23 /* LaunchScreen.storyboard in Resources */,
 				1864B0C7240A96D2002F6D23 /* Assets.xcassets in Resources */,
 				1864B0C5240A96CF002F6D23 /* Main.storyboard in Resources */,
+				18E3E614240A9E8A00D00C3C /* ListViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		28155484F415C1D4A5F85E34 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GitHubList/Pods-GitHubList-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GitHubList/Pods-GitHubList-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GitHubList/Pods-GitHubList-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		66EF6D8AD5B626FC2B3FEE4C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GitHubList-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		1864B0B6240A96CF002F6D23 /* Sources */ = {
@@ -152,6 +251,7 @@
 				1864B0C2240A96CF002F6D23 /* ViewController.swift in Sources */,
 				18E3E60C240A9B0300D00C3C /* GitHubEntity.swift in Sources */,
 				1864B0BE240A96CF002F6D23 /* AppDelegate.swift in Sources */,
+				18E3E612240A9E7800D00C3C /* ListViewController.swift in Sources */,
 				1864B0C0240A96CF002F6D23 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -294,6 +394,7 @@
 		};
 		1864B0CF240A96D2002F6D23 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8D0FE78E37AE67FCBA0C6122 /* Pods-GitHubList.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -311,6 +412,7 @@
 		};
 		1864B0D0240A96D2002F6D23 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 697BA1F59BE24BA14DB078D8 /* Pods-GitHubList.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

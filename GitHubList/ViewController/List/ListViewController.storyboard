@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--List View Controller-->
+        <scene sceneID="z58-KC-kQb">
+            <objects>
+                <viewController id="sPf-4U-Udd" customClass="ListViewController" customModule="GitHubList" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3q1-Ea-xiE">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="agp-QX-Sqe">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="vJ9-cB-0wy">
+                                <rect key="frame" x="195" y="822" width="24" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="24" id="I1b-FY-pbk"/>
+                                    <constraint firstAttribute="width" constant="24" id="dtT-1w-PEb"/>
+                                </constraints>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="agp-QX-Sqe" firstAttribute="trailing" secondItem="RYb-En-xo2" secondAttribute="trailing" id="1Hk-8f-ZfX"/>
+                            <constraint firstAttribute="bottom" secondItem="agp-QX-Sqe" secondAttribute="bottom" id="3ut-eF-vF2"/>
+                            <constraint firstItem="agp-QX-Sqe" firstAttribute="leading" secondItem="RYb-En-xo2" secondAttribute="leading" id="6M1-xj-tCb"/>
+                            <constraint firstItem="vJ9-cB-0wy" firstAttribute="centerX" secondItem="3q1-Ea-xiE" secondAttribute="centerX" id="GAA-1D-d57"/>
+                            <constraint firstItem="RYb-En-xo2" firstAttribute="bottom" secondItem="vJ9-cB-0wy" secondAttribute="bottom" constant="16" id="NFb-fQ-tT2"/>
+                            <constraint firstItem="agp-QX-Sqe" firstAttribute="top" secondItem="3q1-Ea-xiE" secondAttribute="top" id="hlj-vP-F9s"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="RYb-En-xo2"/>
+                    </view>
+                    <connections>
+                        <outlet property="indicator" destination="vJ9-cB-0wy" id="Azz-a0-fRy"/>
+                        <outlet property="tableView" destination="agp-QX-Sqe" id="kS1-sv-vpC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mXw-ko-V2g" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="153.62318840579712" y="99.776785714285708"/>
+        </scene>
+    </scenes>
+</document>

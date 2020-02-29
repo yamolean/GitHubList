@@ -13,6 +13,7 @@
 		1864B0C5240A96CF002F6D23 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1864B0C3240A96CF002F6D23 /* Main.storyboard */; };
 		1864B0C7240A96D2002F6D23 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1864B0C6240A96D2002F6D23 /* Assets.xcassets */; };
 		1864B0CA240A96D2002F6D23 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1864B0C8240A96D2002F6D23 /* LaunchScreen.storyboard */; };
+		18E3E60C240A9B0300D00C3C /* GitHubEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E3E60B240A9B0300D00C3C /* GitHubEntity.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		1864B0C6240A96D2002F6D23 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1864B0C9240A96D2002F6D23 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1864B0CB240A96D2002F6D23 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		18E3E60B240A9B0300D00C3C /* GitHubEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubEntity.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 			children = (
 				1864B0BD240A96CF002F6D23 /* AppDelegate.swift */,
 				1864B0BF240A96CF002F6D23 /* SceneDelegate.swift */,
+				18E3E60A240A9AD300D00C3C /* Model */,
 				1864B0C1240A96CF002F6D23 /* ViewController.swift */,
 				1864B0C3240A96CF002F6D23 /* Main.storyboard */,
 				1864B0C6240A96D2002F6D23 /* Assets.xcassets */,
@@ -65,6 +68,14 @@
 				1864B0CB240A96D2002F6D23 /* Info.plist */,
 			);
 			path = GitHubList;
+			sourceTree = "<group>";
+		};
+		18E3E60A240A9AD300D00C3C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				18E3E60B240A9B0300D00C3C /* GitHubEntity.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,6 +150,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1864B0C2240A96CF002F6D23 /* ViewController.swift in Sources */,
+				18E3E60C240A9B0300D00C3C /* GitHubEntity.swift in Sources */,
 				1864B0BE240A96CF002F6D23 /* AppDelegate.swift in Sources */,
 				1864B0C0240A96CF002F6D23 /* SceneDelegate.swift in Sources */,
 			);

@@ -10,16 +10,13 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-extension ListViewController: StoryboardInstantiable {
-    
-}
+extension ListViewController: StoryboardInstantiable {}
 
 final class ListViewController: UIViewController {
     static func initViewController(with viewModel: ListViewModel) -> ListViewController {
         let view = ListViewController.instantiate()
         view.viewModel = viewModel
         return view
-        
     }
     
     private let disposeBag = DisposeBag()

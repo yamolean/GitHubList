@@ -33,7 +33,7 @@ import RxCocoa
 //final class ListViewModel: ListViewModelType, ListViewModelInput, ListViewModelOutput {
 //    private let disposeBag = DisposeBag()
 //    private let searchAction:
-//    
+//
 //    var inputs: ListViewModelInput { return self }
 //    var outputs: ListViewModelOutput { return self }
 //    //input
@@ -44,8 +44,8 @@ import RxCocoa
 //    var navigationBarTitle: Observable<String>
 //    var isloading: Observable<Bool>
 //    var error: Observable<NSError>
-//    
-//    
-//    
-//    
+//
+//
+//
+//
 //}

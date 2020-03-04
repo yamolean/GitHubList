@@ -27,6 +27,11 @@ final class ListViewController: UIViewController {
     
     override func viewDidLoad() {
         indicator.hidesWhenStopped = true
+        
+        viewModel.outputs.navigationBarTitle
+            .observeOn(MainScheduler.instance)
+            .bind(to: navigationItem.rx.title)
+            .disposed(by: disposeBag)
     }
     
     override func viewWillAppear(_ animated: Bool) {

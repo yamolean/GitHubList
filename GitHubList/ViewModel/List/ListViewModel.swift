@@ -38,13 +38,15 @@ final class ListViewModel: ListViewModelType, ListViewModelInput, ListViewModelO
     private let searchAction: Action<Int, [GitHubEntity]>
     //ViewModel内でGitHubレポジトリデータを保持する
     private let response = BehaviorRelay<[GitHubEntity]>(value: [])
+    private let page = BehaviorRelay<Int>(value: 1)
+
 
     var inputs: ListViewModelInput { return self }
     var outputs: ListViewModelOutput { return self }
     
     //input
-    let fetchTrigger: PublishSubject<Void>
-    var reachButtomAction: PublishSubject<Void>
+    let fetchTrigger = PublishSubject<Void>()
+    var reachButtomAction = PublishSubject<Void>()
     
     //output
     let githubRepositories: Observable<[GitHubEntity]>
@@ -61,9 +63,40 @@ final class ListViewModel: ListViewModelType, ListViewModelInput, ListViewModelO
         }
         //viewmodelで保有されているレポジトリデータを外部に公開
         githubRepositories = response.asObservable()
+        
         //Actionライブラリが持っているLoading状態を外部に公開
         isloading = searchAction.executing.startWith(false)
+        
         //Actionライブラリが持っているerror状態を外部に公開
-        error = searchAction.errors.map { _ in NSError(domain: "Network Error", code: 0, userInfo: nil) }
+        error = searchAction.errors.map { _ in
+            NSError(domain: "Network Error", code: 0, userInfo: nil
+            ) }
+        
+        //Actionライブラリが持っている[GitHubEntity]型のelements
+        searchAction.elements
+            .withLatestFrom(response){ ($0, $1) }
+            .map{ $0.1 + $0.0 } //前回のレスポンス情報と合成
+            .bind(to: response)
+            .disposed(by: disposeBag)
+        
+        searchAction.elements
+            .withLatestFrom(page)
+            .map { $0 + 1 }
+            .bind(to: page)
+            .disposed(by: disposeBag)
+        
+        fetchTrigger
+            .withLatestFrom(page)
+            .bind(to: searchAction.inputs)
+            .disposed(by: disposeBag)
+        
+        reachButtomAction
+            .withLatestFrom(isloading)
+            .filter { !$0 }
+            .withLatestFrom(page)
+            .filter { $0 < 5 }
+            .bind(to: searchAction.inputs)
+            .disposed(by: disposeBag)
     }
+    
 }

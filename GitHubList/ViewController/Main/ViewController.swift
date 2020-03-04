@@ -10,7 +10,7 @@ import UIKit
 
 final class ViewController: UIViewController {
     @IBAction private func buttonTapped(_ sender: UIButton) {
-        let viewController = ListViewController.initViewController(with: ListViewModel())
+        let viewController = ListViewController.initViewController(with: ListViewModel(language: "RxSwift"))
         navigationController?.pushViewController(viewController, animated: true)
     }
 }

@@ -10,6 +10,7 @@ import Foundation
 import RxSwift
 import RxCocoa
 import Action
+import APIKit
 
 //input:(アクション)初回トリガー,ページング
 //output:(データ)セルのデータ,navigationBarタイトル (状態)ローディング,エラー
@@ -33,20 +34,36 @@ protocol ListViewModelType {
 
 final class ListViewModel: ListViewModelType, ListViewModelInput, ListViewModelOutput {
     private let disposeBag = DisposeBag()
+    //Int入れて,[GitHubEntity]をonNextする
     private let searchAction: Action<Int, [GitHubEntity]>
+    //ViewModel内でGitHubレポジトリデータを保持する
+    private let response = BehaviorRelay<[GitHubEntity]>(value: [])
 
     var inputs: ListViewModelInput { return self }
     var outputs: ListViewModelOutput { return self }
+    
     //input
-    var fetchTrigger: PublishSubject<Void>
+    let fetchTrigger: PublishSubject<Void>
     var reachButtomAction: PublishSubject<Void>
+    
     //output
-    var githubRepositories: Observable<[GitHubEntity]>
-    var navigationBarTitle: Observable<String>
-    var isloading: Observable<Bool>
-    var error: Observable<NSError>
+    let githubRepositories: Observable<[GitHubEntity]>
+    let navigationBarTitle: Observable<String>
+    let isloading: Observable<Bool>
+    let error: Observable<NSError>
 
-    init() {
-        
+    init(language: String) {
+        //navibartitleを公開
+        navigationBarTitle = Observable.just("\(language)Repositories")
+        //inが入るとlanguageとpageを引数に[GitHubEntity]をonNext
+        searchAction = Action { page in
+            return Session.shared.rx.response(GitHubApi.SearchRequest(language: language, page: page))
+        }
+        //viewmodelで保有されているレポジトリデータを外部に公開
+        githubRepositories = response.asObservable()
+        //Actionライブラリが持っているLoading状態を外部に公開
+        isloading = searchAction.executing.startWith(false)
+        //Actionライブラリが持っているerror状態を外部に公開
+        error = searchAction.errors.map { _ in NSError(domain: "Network Error", code: 0, userInfo: nil) }
     }
 }

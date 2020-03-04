@@ -28,10 +28,26 @@ final class ListViewController: UIViewController {
     override func viewDidLoad() {
         indicator.hidesWhenStopped = true
         
+        //navigationBarタイトル,out
         viewModel.outputs.navigationBarTitle
             .observeOn(MainScheduler.instance)
             .bind(to: navigationItem.rx.title)
             .disposed(by: disposeBag)
+        
+        //tableViewのItem,out
+        viewModel.outputs.githubRepositories
+            .observeOn(MainScheduler.instance)
+            .bind(to: tableView.rx.items) { _, _, element in
+                let cell = UITableViewCell(style: .subtitle, reuseIdentifier: "subtitle")
+                cell.textLabel?.text = "\(element.fullName)"
+                cell.detailTextLabel?.textColor = UIColor.lightGray
+                cell.detailTextLabel?.text = "\(element.description)"
+                return cell
+        }
+        .disposed(by: disposeBag)
+        
+        
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {

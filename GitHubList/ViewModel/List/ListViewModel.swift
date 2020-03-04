@@ -57,9 +57,9 @@ final class ListViewModel: ListViewModelType, ListViewModelInput, ListViewModelO
 
     init(language: String) {
         //navibartitleを流す,output
-        navigationBarTitle = Observable.just("\(language)Repositories")
+        navigationBarTitle = Observable.just("\(language) Repositories")
         
-        //inが入るとlanguageとpageを引数にAPI叩いて[GitHubEntity]をonNext
+        //pageを入れてAPI叩いて[GitHubEntity]をonNext
         searchAction = Action { page in
             return Session.shared.rx.response(GitHubApi.SearchRequest(language: language, page: page))
         }
@@ -97,7 +97,7 @@ final class ListViewModel: ListViewModelType, ListViewModelInput, ListViewModelO
         // スクロール時に追加データ取得イベントトリガーを購読し、APIリクエスト
         reachButtomAction
             .withLatestFrom(isloading)  //API通信中はリクエストを送らないために、Loadingフラグをストリームに取り込む
-            .filter { !$0 } // 取り込んだ通信中フラグでフィルターをかける。フラグを判定し、trueの場合は次へ行き、false の場合は イベント通知はここで終了
+            .filter { !$0 } // 取り込んだ通信中フラグでフィルター,フラグを判定し、trueの場合は次へ行き、false の場合は イベント通知はここで終了
             .withLatestFrom(page) //APIの使用上リクエスト制限があるので、 page番号でフィルターをかける
             .filter { $0 < 5 } //trueの場合は次へ行き、false の場合は イベント通知はここで終了
             .bind(to: searchAction.inputs)

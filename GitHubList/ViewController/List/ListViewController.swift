@@ -72,10 +72,10 @@ final class ListViewController: UIViewController {
             })
             .disposed(by: disposeBag)
         
-        //初回トリガーでVMに通知,input
+        //初回トリガーでVMに通知,viewdidloadで呼ばれる,input
         viewModel.inputs.fetchTrigger.onNext(())
         
-        //tableViewにreachしたらVMに通知,input
+        //tableViewのbottomにreachしたらVMに通知,input
         tableView.rx.reachedBottom.asObservable()
             .bind(to: viewModel.inputs.reachButtomAction)
             .disposed(by: disposeBag)

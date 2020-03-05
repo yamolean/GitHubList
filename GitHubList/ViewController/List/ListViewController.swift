@@ -46,7 +46,7 @@ final class ListViewController: UIViewController {
         }
         .disposed(by: disposeBag)
         
-        //TODO: セルタップ時の処理
+        //セルタップ時の処理
         tableView.rx.modelSelected(GitHubEntity.self)
             .observeOn(MainScheduler.instance)
             .subscribe(onNext: { [weak self] repository in

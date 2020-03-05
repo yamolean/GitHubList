@@ -16,28 +16,43 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sby-5h-x1Z">
-                                <rect key="frame" x="127" y="408" width="160" height="80"/>
+                                <rect key="frame" x="48" y="408" width="318" height="80"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="80" id="CgZ-MM-9GZ"/>
-                                    <constraint firstAttribute="width" constant="160" id="tqU-q0-imn"/>
                                 </constraints>
-                                <state key="normal" title="List">
+                                <state key="normal" title="Search">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
                                     <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tbV-Gc-tPi"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Repositry" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Eov-jk-KRM">
+                                <rect key="frame" x="24" y="312" width="366" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="8da-df-7sw"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="sby-5h-x1Z" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="CX7-6x-hzQ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="sby-5h-x1Z" secondAttribute="trailing" constant="48" id="I3H-Ta-hZl"/>
                             <constraint firstItem="sby-5h-x1Z" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="OV6-2s-NRo"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Eov-jk-KRM" secondAttribute="trailing" constant="24" id="cGU-J6-h1F"/>
+                            <constraint firstItem="Eov-jk-KRM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="24" id="noz-Um-OQd"/>
+                            <constraint firstItem="sby-5h-x1Z" firstAttribute="top" secondItem="Eov-jk-KRM" secondAttribute="bottom" constant="48" id="xBY-Vp-yJ3"/>
+                            <constraint firstItem="sby-5h-x1Z" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="48" id="yLS-tc-pej"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="8gp-7c-3mO"/>
+                    <connections>
+                        <outlet property="button" destination="sby-5h-x1Z" id="2yH-Fy-jZX"/>
+                        <outlet property="textField" destination="Eov-jk-KRM" id="0dR-jz-sDY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

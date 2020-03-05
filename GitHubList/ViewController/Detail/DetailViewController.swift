@@ -8,6 +8,8 @@
 
 import UIKit
 import RxSwift
+import WebKit
+import RxWebKit
 
 extension DetailViewController: StoryboardInstantiable {}
 
@@ -21,7 +23,7 @@ final class DetailViewController: UIViewController {
     private let disposeBag = DisposeBag()
     private var viewModel: DetailViewModelType!
     
-    @IBOutlet private weak var webView: UIWebView!
+    @IBOutlet private weak var webView: WKWebView!
     @IBOutlet private weak var indicator: UIActivityIndicatorView!
     
     override func viewDidLoad() {
@@ -30,5 +32,12 @@ final class DetailViewController: UIViewController {
             .observeOn(MainScheduler.asyncInstance)
             .bind(to: navigationItem.rx.title)
             .disposed(by: disposeBag)
+        
+        //VCで完結
+        webView.rx.loading
+            .observeOn(MainScheduler.asyncInstance)
+            .bind(to: indicator.rx.isAnimating)
+            .disposed(by: disposeBag)
+        
     }
 }

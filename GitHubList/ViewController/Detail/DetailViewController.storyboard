@@ -39,8 +39,8 @@
                         <viewLayoutGuide key="safeArea" id="evB-lH-pEX"/>
                     </view>
                     <connections>
-                        <outlet property="indicator" destination="Aa1-8D-6r4" id="NqV-TH-Rrg"/>
-                        <outlet property="webView" destination="c6n-al-WJ5" id="pip-j7-Vxl"/>
+                        <outlet property="indicator" destination="Aa1-8D-6r4" id="LZv-pt-RvH"/>
+                        <outlet property="webView" destination="c6n-al-WJ5" id="Zmc-mo-hxD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3du-vT-I91" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

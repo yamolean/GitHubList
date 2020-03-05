@@ -6,6 +6,7 @@ target 'GitHubList' do
   use_frameworks!
 pod 'RxSwift'
 pod 'RxCocoa'
+pod 'RxWebKit'
 pod 'Action'
 pod 'APIKit'
   # Pods for GitHubList

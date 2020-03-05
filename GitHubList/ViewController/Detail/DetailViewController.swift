@@ -8,6 +8,7 @@
 
 import UIKit
 import RxSwift
+import RxCocoa
 import WebKit
 import RxWebKit
 
@@ -27,6 +28,8 @@ final class DetailViewController: UIViewController {
     @IBOutlet private weak var indicator: UIActivityIndicatorView!
     
     override func viewDidLoad() {
+        indicator.hidesWhenStopped = true
+        
         //output
         viewModel.outputs.navigationTitle
             .observeOn(MainScheduler.instance)
@@ -35,7 +38,7 @@ final class DetailViewController: UIViewController {
         
         //VCで完結
         webView.rx.loading
-            .observeOn(MainScheduler.asyncInstance)
+            .observeOn(MainScheduler.instance)
             .bind(to: indicator.rx.isAnimating)
             .disposed(by: disposeBag)
         

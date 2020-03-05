@@ -15,11 +15,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c6n-al-WJ5">
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gD8-Nd-Su6">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </webView>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="Aa1-8D-6r4">
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="Aa1-8D-6r4">
                                 <rect key="frame" x="179" y="420" width="56" height="56"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="56" id="0r0-T5-Q1R"/>
@@ -31,17 +35,17 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="Aa1-8D-6r4" firstAttribute="centerY" secondItem="caZ-Az-O4A" secondAttribute="centerY" id="9dg-Ht-8vP"/>
+                            <constraint firstAttribute="bottom" secondItem="gD8-Nd-Su6" secondAttribute="bottom" id="CuP-2z-hUT"/>
                             <constraint firstItem="Aa1-8D-6r4" firstAttribute="centerX" secondItem="caZ-Az-O4A" secondAttribute="centerX" id="S2u-Sy-3Po"/>
-                            <constraint firstItem="c6n-al-WJ5" firstAttribute="trailing" secondItem="evB-lH-pEX" secondAttribute="trailing" id="Zh1-XW-Uhq"/>
-                            <constraint firstItem="c6n-al-WJ5" firstAttribute="leading" secondItem="evB-lH-pEX" secondAttribute="leading" id="pAO-Zu-t4G"/>
-                            <constraint firstAttribute="bottom" secondItem="c6n-al-WJ5" secondAttribute="bottom" id="sOv-5E-7db"/>
-                            <constraint firstItem="c6n-al-WJ5" firstAttribute="top" secondItem="caZ-Az-O4A" secondAttribute="top" id="uMH-0O-2ab"/>
+                            <constraint firstItem="gD8-Nd-Su6" firstAttribute="leading" secondItem="evB-lH-pEX" secondAttribute="leading" id="ZM0-X9-C7u"/>
+                            <constraint firstItem="gD8-Nd-Su6" firstAttribute="top" secondItem="caZ-Az-O4A" secondAttribute="top" id="g3v-kS-zaa"/>
+                            <constraint firstItem="gD8-Nd-Su6" firstAttribute="trailing" secondItem="evB-lH-pEX" secondAttribute="trailing" id="hwY-0g-hsX"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="evB-lH-pEX"/>
                     </view>
                     <connections>
-                        <outlet property="indicator" destination="Aa1-8D-6r4" id="LZv-pt-RvH"/>
-                        <outlet property="webView" destination="c6n-al-WJ5" id="Zmc-mo-hxD"/>
+                        <outlet property="indicator" destination="Aa1-8D-6r4" id="flV-hF-Fed"/>
+                        <outlet property="webView" destination="gD8-Nd-Su6" id="S5r-cX-crF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3du-vT-I91" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

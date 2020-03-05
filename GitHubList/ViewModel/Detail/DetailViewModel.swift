@@ -27,6 +27,6 @@ final class DetailViewModel: DetailViewModelType, DetailViewModelInput, DetailVi
     let navigationTitle: Observable<String>
     
     init(repository: GitHubEntity) {
-        navigationTitle = Observable.just("\(repository) Detail")
+        navigationTitle = Observable.just("\(repository.fullName) Detail")
     }
 }

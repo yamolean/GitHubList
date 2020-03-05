@@ -14,6 +14,11 @@ import APIKit
 
 //input:(アクション)初回トリガー,ページング
 //output:(データ)セルのデータ,navigationBarタイトル (状態)ローディング,エラー
+//1.fetchされる、pageを引数にしてAPI叩く,naviTitle設置
+//2.ページングしたら(APIが叩いてレスポンスが返って来たら)pageをインクリメント
+//3.searchActionの結果(elements)をtableViewに反映
+//4.searchActionの結果(error)をAlertにして出す
+//5.loading中にindicator回す、tableviewを少し持ち上げる
 
 protocol ListViewModelInput {
     var fetchTrigger: PublishSubject<Void> { get }
@@ -74,7 +79,7 @@ final class ListViewModel: ListViewModelType, ListViewModelInput, ListViewModelO
             NSError(domain: "Network Error", code: 0, userInfo: nil
             ) }
         
-        //Actionライブラリが持っている[GitHubEntity]型のelements,API叩いてresponseにバインド
+        //Actionライブラリが持っている[GitHubEntity]型のelements
         searchAction.elements
             .withLatestFrom(response) { ($0, $1) }
             .map { $0.1 + $0.0 } //前回のレスポンス情報と合成

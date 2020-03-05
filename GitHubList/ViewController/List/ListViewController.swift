@@ -46,7 +46,14 @@ final class ListViewController: UIViewController {
         }
         .disposed(by: disposeBag)
         
-        //TODO: タップ時の処理
+        //TODO: セルタップ時の処理
+        tableView.rx.modelSelected(GitHubEntity.self)
+            .observeOn(MainScheduler.instance)
+            .subscribe(onNext: { [weak self] repository in
+                let vc = DetailViewController.make(with: DetailViewModel(repository: repository))
+                self?.navigationController?.pushViewController(vc, animated: true)
+            })
+            .disposed(by: disposeBag)
         
         //loadingをindicatorに反映,output
         viewModel.outputs.isloading

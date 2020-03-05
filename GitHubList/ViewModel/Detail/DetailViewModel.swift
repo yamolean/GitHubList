@@ -7,10 +7,11 @@
 //
 
 import Foundation
+import RxSwift
 
 protocol DetailViewModelInput {}
 protocol DetailViewModelOutput {
-    
+    var navigationTitle: Observable<String> { get }
 }
 
 protocol DetailViewModelType {
@@ -22,6 +23,10 @@ final class DetailViewModel: DetailViewModelType, DetailViewModelInput, DetailVi
     var inputs: DetailViewModelInput { return self }
     var outputs: DetailViewModelOutput { return self }
     
+    //output
+    let navigationTitle: Observable<String>
+    
     init(repository: GitHubEntity) {
+        navigationTitle = Observable.just("\(repository) Detail")
     }
 }

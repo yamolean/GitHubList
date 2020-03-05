@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import RxSwift
 
 extension DetailViewController: StoryboardInstantiable {}
 
@@ -15,6 +16,8 @@ final class DetailViewController: UIViewController {
         let view = DetailViewController.instantiate()
         return view
     }
+    
+    private let disposeBag = DisposeBag()
     
     @IBOutlet private weak var webView: UIWebView!
     @IBOutlet private weak var indicator: UIActivityIndicatorView!

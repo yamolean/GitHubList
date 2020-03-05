@@ -12,6 +12,7 @@ import RxSwift
 protocol DetailViewModelInput {}
 protocol DetailViewModelOutput {
     var navigationTitle: Observable<String> { get }
+    var request: URLRequest { get }
 }
 
 protocol DetailViewModelType {
@@ -25,8 +26,10 @@ final class DetailViewModel: DetailViewModelType, DetailViewModelInput, DetailVi
     
     //output
     let navigationTitle: Observable<String>
+    let request: URLRequest
     
     init(repository: GitHubEntity) {
         navigationTitle = Observable.just("\(repository.fullName) Detail")
+        request = URLRequest(url: repository.url)
     }
 }

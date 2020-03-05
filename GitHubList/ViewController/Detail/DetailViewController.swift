@@ -29,7 +29,7 @@ final class DetailViewController: UIViewController {
     override func viewDidLoad() {
         //output
         viewModel.outputs.navigationTitle
-            .observeOn(MainScheduler.asyncInstance)
+            .observeOn(MainScheduler.instance)
             .bind(to: navigationItem.rx.title)
             .disposed(by: disposeBag)
         
@@ -39,5 +39,6 @@ final class DetailViewController: UIViewController {
             .bind(to: indicator.rx.isAnimating)
             .disposed(by: disposeBag)
         
+        webView.load(viewModel.outputs.request)
     }
 }

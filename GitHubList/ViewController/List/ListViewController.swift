@@ -76,8 +76,8 @@ final class ListViewController: UIViewController {
         //error処理,output
         viewModel.outputs.error
             .observeOn(MainScheduler.instance)
-            .subscribe(onNext: { [weak self] _ in
-                let ac = UIAlertController(title: Const.errorMessage, message: "nil", preferredStyle: .alert)
+            .subscribe(onNext: { [weak self] error in
+                let ac = UIAlertController(title: Const.errorMessage, message: "\(error)", preferredStyle: .alert)
                 ac.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
                 self?.present(ac, animated: true)
             })

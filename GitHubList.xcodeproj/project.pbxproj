@@ -140,7 +140,7 @@
 		18E3E60A240A9AD300D00C3C /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				18E3E61C240AF06F00D00C3C /* List */,
+				18E3E61C240AF06F00D00C3C /* Response */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -201,12 +201,12 @@
 			path = List;
 			sourceTree = "<group>";
 		};
-		18E3E61C240AF06F00D00C3C /* List */ = {
+		18E3E61C240AF06F00D00C3C /* Response */ = {
 			isa = PBXGroup;
 			children = (
 				18E3E60B240A9B0300D00C3C /* GitHubEntity.swift */,
 			);
-			path = List;
+			path = Response;
 			sourceTree = "<group>";
 		};
 		4021BB645F637E5D55C6AB5F /* Frameworks */ = {

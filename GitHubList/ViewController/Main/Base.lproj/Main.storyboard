@@ -22,11 +22,11 @@
                                 </constraints>
                             </imageView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Repositry Nmae" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Eov-jk-KRM">
-                                <rect key="frame" x="104" y="384" width="262" height="48"/>
+                                <rect key="frame" x="104" y="384" width="254" height="48"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="CW5-d0-LgS"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="DINAlternate-Bold" family="DIN Alternate" pointSize="16"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sby-5h-x1Z">
@@ -39,9 +39,6 @@
                                 <state key="normal" title="Search">
                                     <color key="titleColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
-                                <connections>
-                                    <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tbV-Gc-tPi"/>
-                                </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="search" translatesAutoresizingMaskIntoConstraints="NO" id="q7I-41-6bU">
                                 <rect key="frame" x="48" y="384" width="48" height="48"/>
@@ -55,7 +52,7 @@
                             <constraint firstItem="Eov-jk-KRM" firstAttribute="leading" secondItem="q7I-41-6bU" secondAttribute="trailing" constant="8" id="03K-IH-RfL"/>
                             <constraint firstItem="QIf-Ca-WAz" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="77L-fi-SSA"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="sby-5h-x1Z" secondAttribute="trailing" constant="48" id="AXw-Oy-tCP"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Eov-jk-KRM" secondAttribute="trailing" constant="48" id="JD0-Dk-Gj3"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Eov-jk-KRM" secondAttribute="trailing" constant="56" id="JD0-Dk-Gj3"/>
                             <constraint firstItem="QIf-Ca-WAz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="K7i-8H-8eB"/>
                             <constraint firstItem="Eov-jk-KRM" firstAttribute="top" secondItem="QIf-Ca-WAz" secondAttribute="bottom" constant="16" id="LMc-eS-pE6"/>
                             <constraint firstItem="q7I-41-6bU" firstAttribute="top" secondItem="Eov-jk-KRM" secondAttribute="top" id="Pha-2r-9Uw"/>
@@ -70,7 +67,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="8gp-7c-3mO"/>
                     <connections>
-                        <outlet property="button" destination="sby-5h-x1Z" id="2yH-Fy-jZX"/>
+                        <outlet property="button" destination="sby-5h-x1Z" id="Yqh-UK-epz"/>
                         <outlet property="textField" destination="Eov-jk-KRM" id="0dR-jz-sDY"/>
                     </connections>
                 </viewController>
@@ -88,7 +85,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <textAttributes key="titleTextAttributes">
-                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="textColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>

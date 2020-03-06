@@ -62,7 +62,7 @@ final class ListViewModel: ListViewModelType, ListViewModelInput, ListViewModelO
 
     init(language: String) {
         //navibartitleを流す,output
-        navigationBarTitle = Observable.just("\(language) Repositories")
+        navigationBarTitle = Observable.just("Result: \(language)")
         
         //pageを入れてAPI叩いて[GitHubEntity]をonNext
         searchAction = Action { page in

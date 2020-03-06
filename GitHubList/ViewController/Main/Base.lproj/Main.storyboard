@@ -22,7 +22,7 @@
                                 </constraints>
                             </imageView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Repositry Nmae" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Eov-jk-KRM">
-                                <rect key="frame" x="24" y="376" width="366" height="48"/>
+                                <rect key="frame" x="104" y="384" width="262" height="48"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="CW5-d0-LgS"/>
                                 </constraints>
@@ -30,7 +30,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sby-5h-x1Z">
-                                <rect key="frame" x="48" y="448" width="318" height="64"/>
+                                <rect key="frame" x="48" y="456" width="318" height="64"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="64" id="dZ9-Mv-xgK"/>
@@ -43,15 +43,25 @@
                                     <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tbV-Gc-tPi"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="search" translatesAutoresizingMaskIntoConstraints="NO" id="q7I-41-6bU">
+                                <rect key="frame" x="48" y="384" width="48" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="48" id="nK4-Sv-dlx"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="Eov-jk-KRM" firstAttribute="leading" secondItem="q7I-41-6bU" secondAttribute="trailing" constant="8" id="03K-IH-RfL"/>
                             <constraint firstItem="QIf-Ca-WAz" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="77L-fi-SSA"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="sby-5h-x1Z" secondAttribute="trailing" constant="48" id="AXw-Oy-tCP"/>
-                            <constraint firstItem="Eov-jk-KRM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="24" id="ArF-It-fVs"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Eov-jk-KRM" secondAttribute="trailing" constant="24" id="JD0-Dk-Gj3"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Eov-jk-KRM" secondAttribute="trailing" constant="48" id="JD0-Dk-Gj3"/>
                             <constraint firstItem="QIf-Ca-WAz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="K7i-8H-8eB"/>
-                            <constraint firstItem="Eov-jk-KRM" firstAttribute="top" secondItem="QIf-Ca-WAz" secondAttribute="bottom" constant="8" symbolic="YES" id="LMc-eS-pE6"/>
+                            <constraint firstItem="Eov-jk-KRM" firstAttribute="top" secondItem="QIf-Ca-WAz" secondAttribute="bottom" constant="16" id="LMc-eS-pE6"/>
+                            <constraint firstItem="q7I-41-6bU" firstAttribute="top" secondItem="Eov-jk-KRM" secondAttribute="top" id="Pha-2r-9Uw"/>
+                            <constraint firstItem="q7I-41-6bU" firstAttribute="height" secondItem="Eov-jk-KRM" secondAttribute="height" id="SwQ-MO-Ku6"/>
+                            <constraint firstItem="q7I-41-6bU" firstAttribute="bottom" secondItem="Eov-jk-KRM" secondAttribute="bottom" id="jIx-qM-mbe"/>
+                            <constraint firstItem="q7I-41-6bU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="48" id="nWI-pN-WRH"/>
                             <constraint firstItem="QIf-Ca-WAz" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="phB-ab-Kju"/>
                             <constraint firstItem="sby-5h-x1Z" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="48" id="qww-AU-Ija"/>
                             <constraint firstItem="sby-5h-x1Z" firstAttribute="top" secondItem="Eov-jk-KRM" secondAttribute="bottom" constant="24" id="vEF-VQ-uHV"/>
@@ -93,5 +103,6 @@
     </scenes>
     <resources>
         <image name="github-logo" width="256" height="256"/>
+        <image name="search" width="22" height="23"/>
     </resources>
 </document>

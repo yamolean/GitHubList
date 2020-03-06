@@ -25,6 +25,10 @@ final class ListViewController: UIViewController {
     @IBOutlet private weak var tableView: UITableView!
     @IBOutlet private weak var indicator: UIActivityIndicatorView!
     
+    struct Const {
+        static let errorMessage = "Sorry, There is No Search Result"
+    }
+    
     override func viewDidLoad() {
         indicator.hidesWhenStopped = true
         
@@ -72,8 +76,8 @@ final class ListViewController: UIViewController {
         //error処理,output
         viewModel.outputs.error
             .observeOn(MainScheduler.instance)
-            .subscribe(onNext: { [weak self] in
-                let ac = UIAlertController(title: "Error \($0)", message: nil, preferredStyle: .alert)
+            .subscribe(onNext: { [weak self] _ in
+                let ac = UIAlertController(title: Const.errorMessage, message: "nil", preferredStyle: .alert)
                 ac.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
                 self?.present(ac, animated: true)
             })

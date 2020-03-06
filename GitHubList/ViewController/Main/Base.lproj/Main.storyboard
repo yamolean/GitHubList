@@ -15,36 +15,45 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="github-logo" translatesAutoresizingMaskIntoConstraints="NO" id="QIf-Ca-WAz">
+                                <rect key="frame" x="0.0" y="88" width="414" height="280"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="280" id="I9O-e6-hzY"/>
+                                </constraints>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Repositry Nmae" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Eov-jk-KRM">
+                                <rect key="frame" x="24" y="376" width="366" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="CW5-d0-LgS"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sby-5h-x1Z">
-                                <rect key="frame" x="48" y="408" width="318" height="80"/>
+                                <rect key="frame" x="48" y="448" width="318" height="64"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="80" id="CgZ-MM-9GZ"/>
+                                    <constraint firstAttribute="height" constant="64" id="dZ9-Mv-xgK"/>
                                 </constraints>
                                 <state key="normal" title="Search">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tbV-Gc-tPi"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Repositry" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Eov-jk-KRM">
-                                <rect key="frame" x="24" y="312" width="366" height="48"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="48" id="8da-df-7sw"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="sby-5h-x1Z" secondAttribute="trailing" constant="48" id="I3H-Ta-hZl"/>
-                            <constraint firstItem="sby-5h-x1Z" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="OV6-2s-NRo"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Eov-jk-KRM" secondAttribute="trailing" constant="24" id="cGU-J6-h1F"/>
-                            <constraint firstItem="Eov-jk-KRM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="24" id="noz-Um-OQd"/>
-                            <constraint firstItem="sby-5h-x1Z" firstAttribute="top" secondItem="Eov-jk-KRM" secondAttribute="bottom" constant="48" id="xBY-Vp-yJ3"/>
-                            <constraint firstItem="sby-5h-x1Z" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="48" id="yLS-tc-pej"/>
+                            <constraint firstItem="QIf-Ca-WAz" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="77L-fi-SSA"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="sby-5h-x1Z" secondAttribute="trailing" constant="48" id="AXw-Oy-tCP"/>
+                            <constraint firstItem="Eov-jk-KRM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="24" id="ArF-It-fVs"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Eov-jk-KRM" secondAttribute="trailing" constant="24" id="JD0-Dk-Gj3"/>
+                            <constraint firstItem="QIf-Ca-WAz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="K7i-8H-8eB"/>
+                            <constraint firstItem="Eov-jk-KRM" firstAttribute="top" secondItem="QIf-Ca-WAz" secondAttribute="bottom" constant="8" symbolic="YES" id="LMc-eS-pE6"/>
+                            <constraint firstItem="QIf-Ca-WAz" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="phB-ab-Kju"/>
+                            <constraint firstItem="sby-5h-x1Z" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="48" id="qww-AU-Ija"/>
+                            <constraint firstItem="sby-5h-x1Z" firstAttribute="top" secondItem="Eov-jk-KRM" secondAttribute="bottom" constant="24" id="vEF-VQ-uHV"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -77,4 +86,7 @@
             <point key="canvasLocation" x="137.68115942028987" y="129.91071428571428"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="github-logo" width="256" height="256"/>
+    </resources>
 </document>

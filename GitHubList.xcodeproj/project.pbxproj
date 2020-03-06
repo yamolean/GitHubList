@@ -10,6 +10,7 @@
 		184EC496241117EE00175631 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184EC495241117EE00175631 /* DetailViewController.swift */; };
 		184EC4982411180600175631 /* DetailViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 184EC4972411180600175631 /* DetailViewController.storyboard */; };
 		184EC49B241118CD00175631 /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184EC49A241118CD00175631 /* DetailViewModel.swift */; };
+		184EC49E241190B100175631 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184EC49D241190B100175631 /* ViewModel.swift */; };
 		185E2A62240BA4FE00ECE0C0 /* GitHubRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185E2A61240BA4FE00ECE0C0 /* GitHubRequest.swift */; };
 		185E2A64240BABE400ECE0C0 /* GitHubApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185E2A63240BABE400ECE0C0 /* GitHubApi.swift */; };
 		185E2A66240BB14300ECE0C0 /* SessionExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185E2A65240BB14300ECE0C0 /* SessionExtensions.swift */; };
@@ -32,6 +33,7 @@
 		184EC495241117EE00175631 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		184EC4972411180600175631 /* DetailViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DetailViewController.storyboard; sourceTree = "<group>"; };
 		184EC49A241118CD00175631 /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
+		184EC49D241190B100175631 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		185E2A61240BA4FE00ECE0C0 /* GitHubRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubRequest.swift; sourceTree = "<group>"; };
 		185E2A63240BABE400ECE0C0 /* GitHubApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubApi.swift; sourceTree = "<group>"; };
 		185E2A65240BB14300ECE0C0 /* SessionExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionExtensions.swift; sourceTree = "<group>"; };
@@ -81,6 +83,14 @@
 				184EC49A241118CD00175631 /* DetailViewModel.swift */,
 			);
 			path = Detail;
+			sourceTree = "<group>";
+		};
+		184EC49C2411909D00175631 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				184EC49D241190B100175631 /* ViewModel.swift */,
+			);
+			path = Main;
 			sourceTree = "<group>";
 		};
 		185E2A60240BA39500ECE0C0 /* Api */ = {
@@ -148,6 +158,7 @@
 		18E3E60F240A9DCC00D00C3C /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				184EC49C2411909D00175631 /* Main */,
 				18E3E61B240AF05A00D00C3C /* List */,
 				184EC499241118A500175631 /* Detail */,
 			);
@@ -338,6 +349,7 @@
 				184EC496241117EE00175631 /* DetailViewController.swift in Sources */,
 				186085BB2410424E00652C4D /* ExRxTableView.swift in Sources */,
 				185E2A64240BABE400ECE0C0 /* GitHubApi.swift in Sources */,
+				184EC49E241190B100175631 /* ViewModel.swift in Sources */,
 				18E3E616240AA22700D00C3C /* ListViewModel.swift in Sources */,
 				1864B0BE240A96CF002F6D23 /* AppDelegate.swift in Sources */,
 				185E2A66240BB14300ECE0C0 /* SessionExtensions.swift in Sources */,

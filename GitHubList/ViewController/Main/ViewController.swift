@@ -15,7 +15,8 @@ final class ViewController: UIViewController {
     @IBOutlet private weak var button: UIButton!
     
     override func viewDidLoad() {
-        
+        navigationItem.title = "Search Repositry"
+        button.layer.cornerRadius = button.frame.height / 2
     }
     
     @IBAction private func buttonTapped(_ sender: UIButton) {
@@ -23,4 +24,3 @@ final class ViewController: UIViewController {
         navigationController?.pushViewController(viewController, animated: true)
     }
 }
-

@@ -29,7 +29,7 @@ final class DetailViewModel: DetailViewModelType, DetailViewModelInput, DetailVi
     let request: URLRequest
     
     init(repository: GitHubEntity) {
-        navigationTitle = Observable.just("\(repository.fullName) Detail")
+        navigationTitle = Observable.just("\(repository.fullName)")
         request = URLRequest(url: repository.url)
     }
 }

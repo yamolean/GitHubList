@@ -38,7 +38,7 @@ final class ViewController: UIViewController {
     
     private func buttonTapped() {
         button.rx.tap.subscribe(onNext: { [weak self] _ in
-            guard let text = self?.textField.text else { return }
+            guard let text = self?.textField.text, !text.isEmpty else { return }
             let viewController = ListViewController.initViewController(with: ListViewModel(language: text))
             self?.navigationController?.pushViewController(viewController, animated: true)
         })
